@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="jakarta.faces.core"
+      xmlns:ui="jakarta.faces.facelets">
+<h:head>
+    <title>Car Trends Report</title>
+    <link rel="stylesheet" type="text/css" href="../css/table.css" />
+    <style>
+        .table-container {
+            margin-top: 60px;
+            padding: 60px;
+        }
+        .h2-class {
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #carTrendsTable th {
+            background-color: black;
+            color: white;
+        }
+        .dropdown-container {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .form-control {
+            max-width: 140px;
+        }
+    </style>
+</h:head>
+<h:body>   
+    <!-- Include the header -->
+    <ui:include src="jsf_header.xhtml" />
+
+    <div class="table-container">
+        <h2 class="h2-class">Car Trends Report</h2>
+
+        <!-- Dropdowns for Year and Month -->
+        <h:form id="filterForm">
+            <div class="dropdown-container">
+                <!-- Year Dropdown -->
+                <h:selectOneMenu value="#{CarTrendsBean.currentYear}" styleClass="form-control">
+                    <f:selectItems value="#{CarTrendsBean.availableYears}" var="year"
+                                   itemValue="#{year}" itemLabel="#{year}" />
+                    <f:ajax listener="#{CarTrendsBean.filterData}" render="carTrendsTable" />
+                </h:selectOneMenu>
+
+                <!-- Month Dropdown -->
+                <h:selectOneMenu value="#{CarTrendsBean.currentMonthNumber}" styleClass="form-control">
+                    <f:selectItems value="#{CarTrendsBean.months.entrySet()}" var="entry"
+                                   itemValue="#{entry.key}" itemLabel="#{entry.value}" />
+                    <f:ajax listener="#{CarTrendsBean.filterData}" render="carTrendsTable" />
+                </h:selectOneMenu>
+            </div>
+        </h:form>
+
+        <!-- Table -->
+        <h:dataTable id="carTrendsTable" value="#{CarTrendsBean.carTrends}" var="data"
+                     styleClass="table table-bordered table-hover">
+            <h:column>
+                <f:facet name="header">Car Model Name</f:facet>
+                #{data[0]} <!-- Car Model Name -->
+            </h:column>
+            <h:column>
+                <f:facet name="header">Number of Sales</f:facet>
+                #{data[1]} <!-- Number of Sales -->
+            </h:column>
+        </h:dataTable>
+    </div>
+</h:body>
+</html>

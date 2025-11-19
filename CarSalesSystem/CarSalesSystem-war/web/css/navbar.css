@@ -1,0 +1,37 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Mar 28, 2025, 2:43:01 PM
+    Author     : Chew Jin Ni
+*/
+
+.navbar-brand img {
+    height: 50px; /* Adjust logo size */
+    margin-left: -50px;
+}
+
+.nav-link {
+    font-weight: 500;
+    color: #fff !important;
+    margin-right: 30px;
+}
+
+.navbar {
+    width: 100%;
+    background: #007bff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    position: fixed;  /* Fixed at the top */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
