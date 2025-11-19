@@ -4,38 +4,38 @@ A Java-based car sales management system that streamlines dealership operations.
 
 ## Features
 Managing Staff
-•	To approve, search and update all customer’s information.
-•	To approve, add, search, and update all managing staff and salesmen’s information.
-•	To add, delete, search, and update all cars’ information.
-•	Payment and feedback analysis.
-•	To review requested blacklist customers.
-•	To receive restock alerts
-•	To retrieve 5 reports which are salesmen performance report, car trends report, sales report, sales status report and customer feedback report
+-	To approve, search and update all customer’s information.
+-	To approve, add, search, and update all managing staff and salesmen’s information.
+-	To add, delete, search, and update all cars’ information.
+-	Payment and feedback analysis.
+-	To review requested blacklist customers.
+-	To receive restock alerts.
+-	To retrieve 5 reports which are salesmen performance report, car trends report, sales report, sales status report and customer feedback report.
 
 Salesman
-•	To register and edit individual profile.
-•	To receive customer inquiries automatically assigned by the system.
-•	To view cars’ status.
-•	To update car status under individual care: available, interested, booked or paid.
-•	To cancel interested and booked sales.
-•	To collect payment and give comments on sales under individual care.
-•	To view individual sales records.
-•	To send preset instalment payment reminder email to customer.
-•	To request to blacklist customer.
+- To register and edit individual profile.
+- To receive customer inquiries automatically assigned by the system.
+- To view cars’ status.
+- To update car status under individual care: available, interested, booked or paid.
+- To cancel interested and booked sales.
+- To collect payment and give comments on sales under individual care.
+- To view individual sales records.
+- To send preset instalment payment reminder email to customer.
+- To request to blacklist customer.
 
 Customer
-•	To register and edit individual profile.
-•	To select interested cars and submit inquiries.
-•	To track sales status: Cancelled, Pending Payment, Pending Payment Approval, Manufacturing, Delivering, Delivered.
-•	To give feedback about individual purchases.
-•	To view individual purchase histories and ratings.
-•	To use a financial calculator to estimate monthly payments, total payment, and interest rates based on input.
-•	To upload deposit and instalment document.
+-	To register and edit individual profile.
+-	To select interested cars and submit inquiries.
+-	To track sales status: Cancelled, Pending Payment, Pending Payment Approval, Manufacturing, Delivering, Delivered.
+-	To give feedback about individual purchases.
+-	To view individual purchase histories and ratings.
+-	To use a financial calculator to estimate monthly payments, total payment, and interest rates based on input.
+-	To upload deposit and instalment document.
 
 ## Tech Stack
-•	Java
-•	JEE
-•	HTML,CSS,JS
+- Java
+- JEE
+- HTML,CSS,JS
 
 ## Sample Screenshots
 **Customer**<br>Car Catalog
